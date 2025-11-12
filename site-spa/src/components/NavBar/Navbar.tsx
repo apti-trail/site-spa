@@ -1,4 +1,4 @@
-import { XMarkIcon } from "@heroicons/react/16/solid";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/16/solid";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -13,14 +13,14 @@ export default function Navbar() {
     ];
 
     return(
-        <nav>
-            <div>
-                <div>
-                    <div>
+        <nav className="bg-[#000020]">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex justify-between items-center h-16">
+                    <div className="font-bold text-xl">
                         <p>AptiTrail</p>
                     </div>
 
-                    <div>
+                    <div className="hidden md:flex space-x-6">
                         {links.map((link) => (
                             <Link
                                 key={link.to}
@@ -31,27 +31,28 @@ export default function Navbar() {
                         ))}
                     </div>
 
-                    <div>
+                    <div className="md:hidden">
                         <button
                             onClick={toggleMenu}
-                            className="text-green-800 focus:outline-none"
+                            className="focus:outline-none"
                         >
                             {isOpen ? (
                                 <XMarkIcon className="h-6 w-6"/>
                             ) : (
-                                <p className="h-6 w-6">x</p>
+                                <Bars3Icon className="h-6 w-6"/>
                             )}
                         </button>
                     </div>
                 </div>
             </div>
+
             {isOpen && (
-                <div>
+                <div className="md:hidden px-4 pt-2 pb-4 space-y-1">
                     {links.map((link) => (
                         <Link
                             key={link.to}
                             to={link.to}
-                            className="block text-white hover:text-green-800"
+                            className="block"
                             onClick={() => setIsOpen(false)}
                         >
                             {link.label}
