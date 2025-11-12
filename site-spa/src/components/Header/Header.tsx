@@ -4,8 +4,8 @@ import Navbar from "../NavBar/Navbar";
 
 export default function Header() {
     return(
-        <nav>
+        <header className="bg-[#000020]">
             <Navbar/>
-        </nav>
+        </header>
     );
 }

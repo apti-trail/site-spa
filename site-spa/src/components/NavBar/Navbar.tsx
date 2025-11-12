@@ -9,11 +9,11 @@ export default function Navbar() {
     const toggleMenu = () => setIsOpen(!isOpen);
 
     const links = [
-        { to: "/", label: "Home"}
+        { to: "/", label: "Home" }
     ];
 
     return(
-        <nav className="bg-[#000020]">
+        <nav>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     <div className="font-bold text-xl">

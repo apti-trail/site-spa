@@ -6,8 +6,6 @@ import "./globals.css"
 import Error from './routes/Error/index.tsx'
 
 
-
-
 const router = createBrowserRouter([
   {path: "/", element: <App/>, errorElement: <Error/>, children: [
 
