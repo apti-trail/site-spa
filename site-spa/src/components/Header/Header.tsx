@@ -4,7 +4,7 @@ import Navbar from "../NavBar/Navbar";
 
 export default function Header() {
     return(
-        <header className="bg-[#000020]">
+        <header className="shadow-lg">
             <Navbar/>
         </header>
     );

@@ -4,7 +4,7 @@
 
 @layer base {
     body {
-        @apply text-[#ffff00] bg-[#171a4a]
+        @apply text-black bg-white
     }
     h1 {
         @apply text-[26px] md:text-[34px] lg:text-[46px] font-bold
@@ -13,7 +13,7 @@
         @apply text-[16px] md:text-[20px] 
     }
     button {
-        @apply bg-[#ffff00] rounded-[100px] h-[30px] w-[150px]
+        @apply bg-black rounded-[100px] h-[30px] w-[150px]
     }
 }
 
