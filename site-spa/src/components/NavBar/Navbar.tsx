@@ -9,7 +9,8 @@ export default function Navbar() {
     const toggleMenu = () => setIsOpen(!isOpen);
 
     const links = [
-        { to: "/", label: "Home" }
+        { to: "/", label: "Home" },
+        { to: "/integrantes", label: "Integrantes"}
     ];
 
     return(
