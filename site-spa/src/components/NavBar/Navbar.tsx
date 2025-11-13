@@ -32,7 +32,7 @@ export default function Navbar() {
                     </div>
 
                     <div className="md:hidden">
-                        <button
+                        <div
                             onClick={toggleMenu}
                             className="focus:outline-none"
                         >
@@ -41,7 +41,7 @@ export default function Navbar() {
                             ) : (
                                 <Bars3Icon className="h-6 w-6"/>
                             )}
-                        </button>
+                        </div>
                     </div>
                 </div>
             </div>
