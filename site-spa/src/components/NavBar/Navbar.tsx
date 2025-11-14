@@ -16,16 +16,13 @@ export default function Navbar() {
     return(
         <nav>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between items-center h-16">
-                    <div className="font-bold text-xl">
-                        <p>AptiTrail</p>
-                    </div>
-
+                <div className="flex justify-between items-center h-20">
                     <div className="hidden md:flex space-x-6">
                         {links.map((link) => (
                             <Link
                                 key={link.to}
                                 to={link.to}
+                                className="font-semibold"
                             >
                                 {link.label}
                             </Link>
@@ -48,17 +45,33 @@ export default function Navbar() {
             </div>
 
             {isOpen && (
-                <div className="md:hidden px-4 pt-2 pb-4 space-y-1">
+                <div className="md:hidden absolute top-20 left-0 w-full bg-white shadow-lg px-4 pt-4 pb-6 space-y-3 z-50 divide-y divide-[#2f2c79]">
                     {links.map((link) => (
                         <Link
                             key={link.to}
                             to={link.to}
-                            className="block"
+                            className="block font-semibold"
                             onClick={() => setIsOpen(false)}
                         >
                             {link.label}
                         </Link>
                     ))}
+
+                    <Link
+                        to="/login"
+                        className="block font-semibold text-gray-800"
+                        onClick={() => setIsOpen(false)}
+                    >
+                        Login
+                    </Link>
+
+                    <Link
+                        to="/cadastro"
+                        className="block font-semibold text-gray-800"
+                        onClick={() => setIsOpen(false)}
+                    >
+                        Cadastro
+                    </Link>
                 </div>
             )}
         </nav>
