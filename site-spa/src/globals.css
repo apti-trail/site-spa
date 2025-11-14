@@ -7,13 +7,13 @@
         @apply text-black bg-white
     }
     h1 {
-        @apply text-[30px] md:text-[34px] lg:text-[46px] font-bold
+        @apply text-[30px] md:text-[36px] lg:text-[38px] xl:text-[44px] 2xl:text-[48px] font-bold
     }
     h2 {
-        @apply text-[16px] md:text-[20px] 
+        @apply text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px] 
     }
     button {
-        @apply bg-black rounded-[100px] h-[30px] w-[150px]
+        @apply bg-black rounded-[100px] h-[30px] w-[150px] cursor-pointer hover:scale-105 transition duration-200
     }
 }
 
