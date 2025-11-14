@@ -7,7 +7,7 @@
         @apply text-black bg-white
     }
     h1 {
-        @apply text-[26px] md:text-[34px] lg:text-[46px] font-bold
+        @apply text-[30px] md:text-[34px] lg:text-[46px] font-bold
     }
     h2 {
         @apply text-[16px] md:text-[20px] 

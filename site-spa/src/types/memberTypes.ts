@@ -3,4 +3,6 @@ export type Member = {
     rm: string;
     turma: string;
     foto: string;
+    linkedin: string;
+    github: string;
 }
