@@ -9,6 +9,7 @@ export default function Footer() {
                     <Link to="/" className="hover:text-black transition">Home</Link>
                     <Link to="/integrantes" className="hover:text-black transition">Integrantes</Link>
                     <Link to="/sobre" className="hover:text-black transition">Sobre</Link>
+                    <Link to="/faq">FAQ</Link>
                 </div>
 
                 <div className="flex justify-center gap-5">
