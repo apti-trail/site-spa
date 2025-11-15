@@ -8,6 +8,7 @@ export default function Footer() {
                 <div className="flex justify-center gap-6 text-sm lg:text-base text-gray-600">
                     <Link to="/" className="hover:text-black transition">Home</Link>
                     <Link to="/integrantes" className="hover:text-black transition">Integrantes</Link>
+                    <Link to="/sobre" className="hover:text-black transition">Sobre</Link>
                 </div>
 
                 <div className="flex justify-center gap-5">

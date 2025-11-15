@@ -6,12 +6,14 @@ import "./globals.css"
 import Error from './routes/Error/index.tsx'
 import Home from './routes/Home/index.tsx'
 import Integrantes from './routes/Integrantes/index.tsx'
+import Sobre from './routes/Sobre/index.tsx'
 
 
 const router = createBrowserRouter([
   {path: "/", element: <App/>, errorElement: <Error/>, children: [
     {path: "/", element: <Home/>},
-    {path: "/integrantes", element: <Integrantes/>}
+    {path: "/integrantes", element: <Integrantes/>},
+    {path: "/sobre", element: <Sobre/>}
   ]}
 ]);
 

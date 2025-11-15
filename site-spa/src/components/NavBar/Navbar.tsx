@@ -10,7 +10,8 @@ export default function Navbar() {
 
     const links = [
         { to: "/", label: "Home" },
-        { to: "/integrantes", label: "Integrantes"}
+        { to: "/integrantes", label: "Integrantes"},
+        { to: "/sobre", label: "Sobre"}
     ];
 
     return(
