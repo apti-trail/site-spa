@@ -5,8 +5,6 @@ export default function Home() {
 
             <h2 className="max-w-[600px] text-black">O AptiTrail é uma plataforma criada para facilitar a criação, organização e acompanhamento de trilhas de estudo personalizadas.</h2>
 
-            <button className="text-white bg-[#2f2c79] font-bold mt-6 h-[38px]">Crie sua trilha</button>
-
             <section className="max-w-[900px] w-full mt-20 grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="p-6 bg-gray-100 rounded-xl shadow-md hover:shadow-lg transition">
                     <div className="flex justify-center mb-3">
@@ -55,6 +53,11 @@ export default function Home() {
                     <h3 className="text-lg font-semibold mb-2">Organização total</h3>
                     <p className="text-gray-600 text-sm">Visualize suas trilhas em um único lugar.</p>
                 </div>
+            </section>
+
+            <section className="mt-20 max-w-[700px] text-center">
+                <h2 className="font-bold mb-4">Comece sua jornada de aprendizado agora mesmo!</h2>
+                <button className="bg-[#26245f] text-white h-10">Criar trilha</button>
             </section>
 
 
