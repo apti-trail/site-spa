@@ -66,10 +66,13 @@ export default function Faq() {
                                 />
                             </svg>
                         </button>
+
+                        {openIndex === index && (
+                            <p className="mt-3 text-gray-700 text-sm md:text-[16px] text-left">{item.resposta}</p>
+                        )}
                     </div>
                 ))}
             </section>
-
         </main>
     );
 }
