@@ -67,9 +67,9 @@ export default function Faq() {
                             </svg>
                         </button>
 
-                        {openIndex === index && (
-                            <p className="mt-3 text-gray-700 text-sm md:text-[16px] text-left">{item.resposta}</p>
-                        )}
+                        <div className={`overflow-hidden transition-all duration-300 ${openIndex === index ? "max-h-40 mt-3" : "max-h-0"}`}>
+                            <p className="text-gray-700 text-sm md:text-[16px] text-left">{item.resposta}</p>
+                        </div>
                     </div>
                 ))}
             </section>
