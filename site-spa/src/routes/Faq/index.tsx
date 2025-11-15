@@ -10,7 +10,7 @@ export default function Faq() {
         {
             pergunta: "O AptiTrail é gratuito?",
             resposta:
-                "Sim! O AptiTrail foi desenvolvido como um projeto acadêmico e pode ser usado gratuitamente pelos usuários."
+                "Sim, mas temos o plano pago."
         },
         {
             pergunta: "Para quem o AptiTrail é indicado?",
