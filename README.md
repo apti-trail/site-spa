@@ -1,6 +1,6 @@
 # Acompanha+
 
-**Site oficial do AptiTrail, plataforma que crie e organiza trilhas de estudo.**
+**Site oficial do AptiTrail, plataforma que cria e organiza trilhas de estudo.**
 
 ---
 
