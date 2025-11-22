@@ -1,9 +1,10 @@
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/16/solid";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import type { NavbarProps } from "../../types/navbarProps";
 
 
-export default function Navbar() {
+export default function Navbar({ logado, onLogout }: NavbarProps) {
     const[isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => setIsOpen(!isOpen);
@@ -58,22 +59,31 @@ export default function Navbar() {
                             {link.label}
                         </Link>
                     ))}
+                    {!logado ? (
+                        <>
+                            <Link
+                            to="/login"
+                            className="block font-semibold text-gray-800"
+                            onClick={() => setIsOpen(false)}
+                            >
+                                Login
+                            </Link>
 
-                    <Link
-                        to="/login"
-                        className="block font-semibold text-gray-800"
-                        onClick={() => setIsOpen(false)}
-                    >
-                        Login
-                    </Link>
-
-                    <Link
-                        to="/cadastro"
-                        className="block font-semibold text-gray-800"
-                        onClick={() => setIsOpen(false)}
-                    >
-                        Cadastro
-                    </Link>
+                            <Link
+                                to="/cadastro"
+                                className="block font-semibold text-gray-800"
+                                onClick={() => setIsOpen(false)}
+                            >
+                                Cadastro
+                            </Link>
+                        </>
+                    
+                    ) : (
+                        <button onClick={() => {
+                            onLogout();
+                            setIsOpen(false);
+                        }} className="block text-red-600 font-semibold pt-3">SAIR</button>
+                    )}
                 </div>
             )}
         </nav>

@@ -22,10 +22,12 @@ export default function Login() {
             const usuario = await response.json();
 
             sessionStorage.setItem("usuarioLogado", JSON.stringify(usuario));
-            sessionStorage.setItem("logado", "true");
+
+            window.dispatchEvent(new Event("storage"));
 
             alert("Login realizado com sucesso!");
-            navigate();
+            
+            navigate("/");
         } catch(error) {
             console.error(error);
             alert("Erro ao fazer login.");
