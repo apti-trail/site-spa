@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import { TipoLogin } from "../../types/tipoLogin";
+import type { TipoLogin } from "../../types/tipoLogin";
 
 export default function Login() {
     const navigate = useNavigate();
@@ -34,7 +34,7 @@ export default function Login() {
 
     return(
         <main className="min-h-screen flex flex-col items-center text-center px-6 py-20 bg-gray-50">
-            <h1 className="mb-12 text-3xl font-bold">Login</h1>
+            <h1 className="mb-12 font-bold">Login</h1>
 
             <form onSubmit={handleSubmit(onSubmit)} className="bg-white shadow-md rounded-lg p-8 w-full max-w-md flex flex-col space-y-4 text-left">
                 <input type="email" placeholder="E-mail" {...register("email", { required: "O e-mail é obrigatório" })} className="border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#2f2c79]" />
