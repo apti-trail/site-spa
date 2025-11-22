@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import Navbar from "../NavBar/Navbar";
+import { Link } from "react-router-dom";
 
 
 export default function Header() {
@@ -13,8 +14,8 @@ export default function Header() {
             </div>
             
             <div className="hidden md:flex gap-2.5 w-1/3 justify-end">
-                <button className="text-white w-[75px] rounded-[5px] h-[32px]">Login</button>
-                <button className="text-white bg-[#2f2c79] w-[95px] rounded-[5px] h-[32px]">Cadastro</button>
+                <Link to="/login"><button className="text-white w-[75px] rounded-[5px] h-[32px]">Login</button></Link>
+                <Link to="/cadastro"><button className="text-white bg-[#2f2c79] w-[95px] rounded-[5px] h-[32px]">Cadastro</button></Link>
             </div>
         </header>
     );
