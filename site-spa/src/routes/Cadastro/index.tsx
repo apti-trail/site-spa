@@ -10,7 +10,7 @@ export default function Cadastro() {
         try {
             const response = await fetch("https://java-api-trail.onrender.com/usuarios", {
                 method: "POST",
-                headers: { "ContentType": "application/json" },
+                headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(data)
             });
 
@@ -38,8 +38,8 @@ export default function Cadastro() {
                 <input type="email" placeholder="E-mail" {...register("email", { required: "O e-mail é obrigatório" })} className="border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#2f2c79]" />
                 {errors.email && <span className="text-red-600 text-sm">{errors.email.message}</span>}
 
-                <input type="password" placeholder="Senha" {...register("password", { required: "A senha é obrigatória" })} className="border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#2f2c79]"/>
-                {errors.password && <span className="text-red-600 text-sm">{errors.password.message}</span>}
+                <input type="password" placeholder="Senha" {...register("senha", { required: "A senha é obrigatória" })} className="border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#2f2c79]"/>
+                {errors.senha && <span className="text-red-600 text-sm">{errors.senha.message}</span>}
 
                 <button type="submit" className="bg-[#26245f] text-white h-10 rounded-lg mt-4 hover:opacity-90 transition mx-auto w-[140px]">Cadastrar</button>
             </form>
