@@ -1,4 +1,37 @@
+import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+import { TipoLogin } from "../../types/tipoLogin";
+
 export default function Login() {
+    const navigate = useNavigate();
+    const { register, handleSubmit, formState: { errors } } = useForm<TipoLogin>();
+
+    const onSubmit = async (data: TipoLogin) => {
+        try {
+            const response = await fetch("https://java-api-trail.onrender.com/usuarios/login", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data)
+            });
+
+            if (!response.ok) {
+                alert("E-mail ou senha incorretos!");
+                return;
+            }
+
+            const usuario = await response.json();
+
+            sessionStorage.setItem("usuarioLogado", JSON.stringify(usuario));
+            sessionStorage.setItem("logado", "true");
+
+            alert("Login realizado com sucesso!");
+            navigate();
+        } catch(error) {
+            console.error(error);
+            alert("Erro ao fazer login.");
+        }
+    }
+
     return(
         <main className="min-h-screen flex flex-col items-center text-center px-6 py-20 bg-gray-50">
             <h1 className="mb-12 text-3xl font-bold">Login</h1>
