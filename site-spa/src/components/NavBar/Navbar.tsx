@@ -13,7 +13,8 @@ export default function Navbar({ logado, onLogout }: NavbarProps) {
         { to: "/", label: "Home" },
         { to: "/integrantes", label: "Integrantes"},
         { to: "/sobre", label: "Sobre"},
-        { to: "/faq", label: "FAQ"}
+        { to: "/faq", label: "FAQ"},
+        { to: "/trilhas", label: "Trilhas"}
     ];
 
     return(
@@ -82,7 +83,7 @@ export default function Navbar({ logado, onLogout }: NavbarProps) {
                         <button onClick={() => {
                             onLogout();
                             setIsOpen(false);
-                        }} className="block text-red-600 font-semibold pt-3">SAIR</button>
+                        }} className="text-red-600">SAIR</button>
                     )}
                 </div>
             )}
