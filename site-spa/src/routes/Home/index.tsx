@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+
+
 export default function Home() {
     return(
         <main className="flex flex-col items-center text-center px-6 py-20">
@@ -57,10 +60,8 @@ export default function Home() {
 
             <section className="mt-20 max-w-[700px] text-center">
                 <h2 className="font-bold mb-4">Comece sua jornada de aprendizado agora mesmo!</h2>
-                <button className="bg-[#26245f] text-white h-10">Criar trilha</button>
+                <Link to="/trilhas"><button className="bg-[#26245f] text-white h-10">Criar trilha</button></Link>
             </section>
-
-
         </main>
     );
 }
