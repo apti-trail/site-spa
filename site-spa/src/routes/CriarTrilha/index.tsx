@@ -18,8 +18,8 @@ export default function CriarTrilha() {
         const usuario = JSON.parse(usuarioLogado);
 
         const novaTrilha = {
-            titulo: titulo,
-            usuario: { id: usuario.id }
+            titulo,
+            usuarioId: usuario.id
         };
 
         try {
@@ -47,8 +47,13 @@ export default function CriarTrilha() {
         <main className="flex flex-col items-center text-center px-6 py-20">
             <h1 className="mb-6">Criar Trilha</h1>
 
-            <section>
-                <form onSubmit={handleSubmit}></form>
+            <section className="bg-gray-100 p-8 rounded-xl shadow-md w-full max-w-md hover:shadow-lg transition">
+                <form onSubmit={handleSubmit} className="flex flex-col space-y-4 text-left">
+                    <label className="font-medium">Tema da trilha</label>
+                    <input type="text" placeholder="Ex: JavaScript, Python..." value={titulo} onChange={(e) => setTitulo(e.target.value)} className="border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#2f2c79]" required/>
+
+                    <button type="submit" className="bg-[#26245f] text-white h-10 rounded-lg hover:opacity-90 transition">Criar trilha</button>
+                </form>
             </section>
 
         </main>
