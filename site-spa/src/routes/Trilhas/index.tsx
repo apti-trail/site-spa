@@ -54,6 +54,8 @@ export default function Trilhas() {
                     />
                 ))}
             </div>
+
+            <button onClick={() => navigate("/criar-trilha")} className="text-white bg-[#26245f] mt-8 h-[35px]">Criar nova trilha</button>
         </main>
     );
 }

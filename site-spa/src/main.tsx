@@ -11,6 +11,7 @@ import Faq from './routes/Faq/index.tsx'
 import Login from './routes/Login/index.tsx'
 import Cadastro from './routes/Cadastro/index.tsx'
 import Trilhas from './routes/Trilhas/index.tsx'
+import CriarTrilha from './routes/CriarTrilha/index.tsx'
 
 
 const router = createBrowserRouter([
@@ -21,7 +22,8 @@ const router = createBrowserRouter([
     {path: "/faq", element: <Faq/>},
     {path: "/login", element: <Login/>},
     {path: "cadastro", element: <Cadastro/>},
-    {path: "trilhas", element: <Trilhas/>}
+    {path: "trilhas", element: <Trilhas/>},
+    {path: "/criar-trilha", element: <CriarTrilha/>}
   ]}
 ]);
 

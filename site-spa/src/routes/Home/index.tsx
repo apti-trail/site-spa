@@ -60,7 +60,7 @@ export default function Home() {
 
             <section className="mt-20 max-w-[700px] text-center">
                 <h2 className="font-bold mb-4">Comece sua jornada de aprendizado agora mesmo!</h2>
-                <Link to="/trilhas"><button className="bg-[#26245f] text-white h-10">Criar trilha</button></Link>
+                <Link to="/criar-trilha"><button className="bg-[#26245f] text-white h-10">Criar trilha</button></Link>
             </section>
         </main>
     );
