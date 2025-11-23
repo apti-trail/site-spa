@@ -64,8 +64,8 @@ https://github.com/apti-trail/site-spa
 
 ## 🔗 Vídeo youtube
 
-**TODO:** adicionar link do vídeo
+https://www.youtube.com/watch?v=ydeWeHxptBw
 
 ## 🔗 URL Vercel
 
-**TODO:** adicionar link da vercel
+https://globalsolution-4x0zuwqcx-matheus-projects-87fdecb7.vercel.app/
