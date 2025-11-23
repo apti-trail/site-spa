@@ -1,7 +1,7 @@
 import type { TrilhaCardProps } from "../../types/trilhaCardProps"
 
 
-export default function Trilhacard({ titulo, onClick }: TrilhaCardProps) {
+export default function Trilhacard({ titulo }: TrilhaCardProps) {
     return(
         <div className="bg-white shadow-md rounded-xl p-4 
                 w-full h-40                      /* mobile */
