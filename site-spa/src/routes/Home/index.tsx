@@ -1,7 +1,19 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 export default function Home() {
+    const navigate = useNavigate();
+
+    const handleCriarTrilha = () => {
+        const usuarioLogado = sessionStorage.getItem("usuarioLogado");
+
+        if (!usuarioLogado) {
+            navigate("/login");
+        } else {
+            navigate("/criar-trilha");
+        }
+    };
+
     return(
         <main className="flex flex-col items-center text-center px-6 py-20">
             <h1 className="mb-6">Bem vindo ao Apti<span className="text-[#2f2c79]">Trail</span></h1>
@@ -60,7 +72,8 @@ export default function Home() {
 
             <section className="mt-20 max-w-[700px] text-center">
                 <h2 className="font-bold mb-4">Comece sua jornada de aprendizado agora mesmo!</h2>
-                <Link to="/criar-trilha"><button className="bg-[#26245f] text-white h-10">Criar trilha</button></Link>
+
+                <button onClick={handleCriarTrilha} className="bg-[#26245f] text-white h-10 px-6 rounded-lg hover:opacity-90 transition">Criar trilha</button>
             </section>
         </main>
     );
